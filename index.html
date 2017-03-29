@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#2196F3">    
+
+    <title>Progressive Web Apps</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="snackbar" class="hide"></div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="clr-red">Technologies behind Progressive Web App</h2>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background:url('./img/web-app.jpeg');"></div>
+                <div class="carousel-caption">
+                    <h4>Service Worker is a client side proxy written in JavaScript that is run by your browser in the background separate from your web page and handles events fired by the browser or your web page. Since it runs in the background it doesn’t need the web page to be open. One of the electrifying feature to handle the fetch event — Intercepting and responding to network requests. This puts the service worker virtually between the browser and the network. Allowing the service worker to provide the content even when off-line and syncing back to the server when a connection is available.</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background:url('./img/web-app.jpeg');"></div>
+                <div class="carousel-caption">
+                    <h4>Service Worker has a different life cycle which is completely separate from the web page. In order to use the service worker it has to be registered by your app. If the page never had before service worker or the service worker  has been updated the browser gets the service worker and installs it.Hence after being installed it then gets activated. The service worker then controls the pages under the scope (Don’t worry if you are not aware with the scope will cover later). Once the service worker is in control it will handle fetch,message/push events. Note that the browser terminates the service worker to save memory and it will be restarted as needed.</h4>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background:url('./img/web-app.jpeg');"></div>
+                <div class="carousel-caption">
+                    <h4>Web Manifest File gives the ability to control how your app appears to the user and more significantly how the app is launched.When a set of heuristics are met the web app prompts the user to add your app to the home screen. Then when the user opens up the home screen it opens up the full screen app with no browser UI. Thus it feels like any other native app.</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <!--<div class="col-lg-12">
+                <h1 class="page-header text-center">
+                    Welcome To New Era Of Web Apps - "Progressive Web Apps"
+                </h1>
+            </div>-->
+
+            <div class="col-lg-12 text-center">
+                <a class="btn btn-lg btn-secondary btn-content" role="button" onclick="getList();">
+                Get &nbsp;<i class="fa fa-arrow-right"></i> &nbsp;List of Blogs &nbsp;<span class="show-loader hide"><i class="fa fa-spinner"></i>&nbsp; </span></a>
+            </div>
+
+            <div class="parent-container hide">
+                <h2 class="text-center push-30">Kick starting with Progressive Web Apps </h2>
+                <div class="col-lg-4 text-center blog-content">
+                  <img class="rounded-circle" alt="Generic placeholder image" width="140" height="140">
+                  <h2 class="blog-head"></h2>
+                  <p class="blog-desc"></p>
+                  <p><a class="btn btn-secondary blog-link" role="button">View details »</a></p>
+                </div>        
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <p>Copyright &copy; Aazib Gandhi </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+ 
+    function getList() {
+        $('.show-loader').removeClass('hide');
+        var response = '',i = 0,cloned_div = '' ;
+        $.get( "https://api.myjson.com/bins/wksxn", function( result ) {
+            response = result.data;
+            cloned_div = $(".parent-container").find('.blog-content').clone();
+            setTimeout(function(){
+                for(i=0;i<response.length;i++){
+                    $('.parent-container').removeClass('hide');
+                    $('.blog-content').find('.rounded-circle').eq(i).attr("src",response[i].blog_image);
+                    $('.blog-content').find('.blog-head').eq(i).html(response[i].blog_name);
+                    $('.blog-content').find('.blog-desc').eq(i).html(response[i].blog_description);
+                    $('.blog-content').find('.blog-link').eq(i).attr("href",response[i].blog_link);
+                    if(response.length > i + 1 ){
+                        $('.parent-container').append(cloned_div.clone());
+                    }
+                }
+                $('.show-loader').addClass('hide');
+            },1500);  
+        });
+    }
+
+    if('serviceWorker' in navigator)
+    {
+    navigator.serviceWorker.register('./service-worker.js')
+    .then(function(registration) {
+        // console.log('Service Worker Registered', registration);
+    });
+    }
+window.addEventListener('load', function() {
+   function network_status(event) {
+       if (navigator.onLine) {
+          console.log("You are online!");
+          document.documentElement.classList.remove("is-offline");
+          var e = document.getElementById("snackbar");
+          e.innerHTML = 'Your are Online!';
+          e.style.backgroundColor = "#80B3FF";
+          e.className = "show", setTimeout(function() {
+          e.className = e.className.replace("show", "")
+          }, 1500);          
+       }
+       else
+       {
+         console.log("You are offline!");
+         document.documentElement.classList.add("is-offline");
+         var e = document.getElementById("snackbar");
+         e.innerHTML = 'Your are Offline!';
+         e.className = "show", setTimeout(function() {
+           e.className = e.className.replace("show", "")
+         }, 1500);
+       }
+   }
+   window.addEventListener('online', network_status);
+   window.addEventListener('offline', network_status);
+   network_status();
+});
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+/*!
+ * Start Bootstrap - Modern Business (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.navbar-inverse{
+    background: #80b3ff;
+    border: none;
+}
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: .1;
+}
+h4 {
+    font-size: 23px;
+    color: #5a5a5a;
+    font-weight: 100;
+    text-shadow: none;    
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 10px 0;
+}
+
+body {
+    font-family:"-webkit-pictograph";
+    color: #5a5a5a;
+}
+.clr-red { color: #fff; }   
+.container .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem; 
+    font-size: 15px;
+}
+.btn-secondary {
+     color: #B22222; 
+     background-color: #fff; 
+     border-color: #ccc; 
+}
+.btn-secondary:hover {
+    color: #B22222;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+.btn-content{
+    margin: 20px 0;
+}     
+.rounded-circle{
+    border-radius: 50%;
+    border: 2px solid #eee;
+}
+.push-30{
+    margin-bottom: 30px;
+}
+.icon-next,.icon-prev{
+    color: #000;
+}
+hr { 
+    margin-top: 20px;
+     margin-bottom: 0; 
+ }
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+.is-offline{-webkit-filter:grayscale(1);filter:grayscale(1);cursor:default}
+/* Responsive Styles */
+
+@media(max-width:767px) {
+    header.carousel .carousel {
+        height: 70%;
+    }
+}

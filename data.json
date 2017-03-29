@@ -1,0 +1,33 @@
+{
+   "data":[{
+       "blog_id":"1",
+       "blog_name": "Part 1",
+       "blog_description":"Learn how to register service worker and cache the resources in our app on the initial load.",
+       "blog_image":"./img/service-worker.png",
+       "blog_link":""
+   },{
+       "blog_id":"2",
+       "blog_name": "Part 2",
+       "blog_description":"Learn how to update the old service worker and cache the new response in Cache Storage.",
+       "blog_image":"./img/service-worker.png",
+       "blog_link":""
+   },{
+       "blog_id":"3",
+       "blog_name": "Part 3",
+       "blog_description":"Learn how to get out the resources from the cache and intercept the network requests",
+       "blog_image":"./img/service-worker.png",
+       "blog_link":""
+   },{
+       "blog_id":"4",
+       "blog_name": "Part 4",
+       "blog_description":"Learn how to make  our web app installable via the Web App Manifest File.",
+       "blog_image":"./img/img-0.png",
+       "blog_link":""
+   },{
+       "blog_id":"5",
+       "blog_name": "Part 5",
+       "blog_description":"Learn to grey out the things when offline",
+       "blog_image":"./img/no-internet.png",
+       "blog_link":""
+   }]
+}
