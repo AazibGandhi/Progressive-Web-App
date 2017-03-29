@@ -1,6 +1,18 @@
 var cacheName = 'cache_version3';
 var cacheFiles = [
-   'index.html'
+  'index.html',
+  './css/modern-business.css',
+  './font-awesome/css/font-awesome.min.css',
+  './font-awesome/fonts/FontAwesome.otf',
+  './font-awesome/fonts/fontawesome-webfont.eot',
+  './font-awesome/fonts/fontawesome-webfont.svg',
+  './font-awesome/fonts/fontawesome-webfont.ttf',
+  './font-awesome/fonts/fontawesome-webfont.woff',
+  './img/img-0.png',
+  './img/no-internet.png',
+  './img/pwa.png',
+  './img/service-worker.png',
+  './img/web-app.jpeg'
 ];
 self.addEventListener('install',function(e){
   //  console.log("[Service Worker] Installed");
